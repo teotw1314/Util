@@ -31,6 +31,12 @@ Util是一个.net core平台下的应用框架，旨在提升小型团队的开�
     <OutputPath>..\..\output\release\</OutputPath>
     <DocumentationFile>..\..\output\release\netstandard2.0\Util.xml</DocumentationFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Datas\**" />
+    <EmbeddedResource Remove="Datas\**" />
+    <None Remove="Datas\**" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AspectCore.Extensions.AspectScope" Version="1.3.0" />
     <PackageReference Include="AspectCore.Extensions.Autofac" Version="1.3.0" />
