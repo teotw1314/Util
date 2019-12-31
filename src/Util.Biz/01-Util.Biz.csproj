@@ -32,6 +32,12 @@ Util是一个.net core平台下的应用框架，旨在提升小型团队的开�
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Addresses\**" />
+    <EmbeddedResource Remove="Addresses\**" />
+    <None Remove="Addresses\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Util\01-Util.csproj" />
   </ItemGroup>
 

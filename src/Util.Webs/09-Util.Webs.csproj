@@ -27,15 +27,34 @@ Util是一个.net core平台下的应用框架，旨在提升小型团队的开�
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Razors\**" />
+    <EmbeddedResource Remove="Razors\**" />
+    <None Remove="Razors\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\CrudControllerBase.cs" />
+    <Compile Remove="Controllers\QueryControllerBase.cs" />
+    <Compile Remove="Controllers\Trees\ControllerBase.cs" />
+    <Compile Remove="Controllers\WebApiControllerBase.cs" />
+    <Compile Remove="Extensions\Extensions.Middleware.cs" />
+    <Compile Remove="Extensions\Extensions.Service.cs" />
+    <Compile Remove="Extensions\Extensions.XsrfToken.cs" />
+    <Compile Remove="Filters\AntiDuplicateRequestAttribute.cs" />
+    <Compile Remove="Filters\ErrorLogAttribute.cs" />
+    <Compile Remove="Filters\ExceptionHandlerAttribute.cs" />
+    <Compile Remove="Filters\HtmlAttribute.cs" />
+    <Compile Remove="Filters\TraceLogAttribute.cs" />
+    <Compile Remove="Middlewares\ErrorLogMiddleware.cs" />
+    <Compile Remove="Middlewares\RealIpMiddleware.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Swaggers\index.html" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Swaggers\index.html" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Extensions\Extensions.Middleware.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -61,6 +80,12 @@ Util是一个.net core平台下的应用框架，旨在提升小型团队的开�
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>WebResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\Trees\" />
+    <Folder Include="Filters\" />
+    <Folder Include="Middlewares\" />
   </ItemGroup>
 
 </Project>

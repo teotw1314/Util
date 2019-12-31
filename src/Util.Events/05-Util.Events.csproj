@@ -30,6 +30,11 @@ Util是一个.net core平台下的应用框架，旨在提升小型团队的开�
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Cap\Extensions.Service.cs" />
+    <Compile Remove="Cap\MessageEventBus.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="DotNetCore.CAP.Kafka" Version="2.6.0" />
     <PackageReference Include="DotNetCore.CAP.MySql" Version="2.6.0" />
     <PackageReference Include="DotNetCore.CAP.PostgreSql" Version="2.6.0" />

@@ -33,9 +33,32 @@ Util是一个.net core平台下的应用框架，旨在提升小型团队的开�
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Applications\Operations\**" />
     <Compile Remove="Datas\**" />
+    <Compile Remove="Domains\Repositories\**" />
+    <EmbeddedResource Remove="Applications\Operations\**" />
     <EmbeddedResource Remove="Datas\**" />
+    <EmbeddedResource Remove="Domains\Repositories\**" />
+    <None Remove="Applications\Operations\**" />
     <None Remove="Datas\**" />
+    <None Remove="Domains\Repositories\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Applications\IQueryService.cs" />
+    <Compile Remove="Domains\AggregateRoot.cs" />
+    <Compile Remove="Domains\DomainBase.cs" />
+    <Compile Remove="Domains\EntityBase.cs" />
+    <Compile Remove="Domains\Trees\ITreeCompactRepository.cs" />
+    <Compile Remove="Domains\Trees\ITreeRepository.cs" />
+    <Compile Remove="Domains\Trees\TreeEntityBase.cs" />
+    <Compile Remove="Domains\Trees\UpdatePathManager.cs" />
+    <Compile Remove="Domains\ValueObjectBase.cs" />
+    <Compile Remove="Expressions\PredicateExpressionBuilder.cs" />
+    <Compile Remove="Extensions.Lambda.cs" />
+    <Compile Remove="Extensions.Queryable.cs" />
+    <Compile Remove="Extensions.Tree.cs" />
+    <Compile Remove="Helpers\Lambda.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AspectCore.Extensions.AspectScope" Version="1.3.0" />
